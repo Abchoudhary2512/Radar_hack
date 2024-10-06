@@ -1,0 +1,18 @@
+[package]
+name = "escrow"
+version = "0.1.0"
+edition = "2021"
+
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+ink = { version = "5.0.0", default-features = false }
+ink_allocator = { version = "5.0.0", default-features = false }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
